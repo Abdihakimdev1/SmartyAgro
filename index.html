@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Smarty System</title>
+    <title>Smarty Agro System</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
     <link rel="stylesheet" href="style.css">
     <meta name="theme-color" content="#06182b">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="icon-192.png">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-192.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -55,7 +55,7 @@
         <span class="auth-blob auth-blob-br"></span>
         <div class="auth-wrap">
             <div class="auth-brand">
-                <img class="sm-logo" src="icon.svg" alt="Smarty System" width="64" height="64">
+                <img class="sm-logo" src="assets/icon.svg" alt="Smarty System" width="64" height="64">
                 <div>
                     <h1>Smarty <b>Agro</b></h1>
                     <small>SMART BUSINESS &bull; BETTER FUTURE</small>
@@ -161,11 +161,11 @@
             <input type="hidden" id="staff-id">
             <div class="grid-2">
                 <div class="form-group"><label>Full name</label><input type="text" id="staff-name" maxlength="80" placeholder="Name"></div>
-                <div class="form-group"><label>Role</label><select id="staff-role" onchange="onStaffRoleChange()"></select></div>
+                <div class="form-group"><label>Role Access</label><select id="staff-role" onchange="onStaffRoleChange()"></select></div>
             </div>
             <div class="grid-2">
-                <div class="form-group"><label>Email</label><input type="email" id="staff-email" autocomplete="off" placeholder="name@example.com"></div>
-                <div class="form-group"><label>Phone</label><input type="tel" id="staff-phone" autocomplete="off" placeholder="+252 61 234 5678"></div>
+                <div class="form-group"><label>Email Address</label><input type="email" id="staff-email" autocomplete="off" placeholder="example@email.com"></div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" id="staff-phone" autocomplete="off" placeholder="+252 63 XXX XXXX"></div>
             </div>
             <div class="form-group" id="staff-password-group">
                 <label>Password (min 10 characters, letters + numbers)</label>
@@ -197,8 +197,8 @@
         <!-- GLOBAL TOP BAR -->
         <div class="global-topbar">
             <div class="topbar-logo">
-                <img class="sm-logo" src="icon.svg" alt="Smarty System" width="44" height="44">
-                <span class="brand-text"><b>SMARTY</b><small>SYSTEM</small></span>
+                <img class="sm-logo" src="assets/icon.svg" alt="Smarty System" width="44" height="44">
+                <span class="brand-text"><b>SMARTY</b><small>AGRO</small></span>
             </div>
             <div class="topbar-profile">
                 <div class="topbar-avatar avatar-box">
@@ -231,8 +231,8 @@
         <!-- SIDEBAR NAVIGATION -->
         <aside id="sidebar-menu">
             <div class="sidebar-brand">
-                <img class="sm-logo" src="icon.svg" alt="Smarty System" width="44" height="44">
-                <span class="brand-text"><b>SMARTY</b><small>SYSTEM</small></span>
+                <img class="sm-logo" src="assets/icon.svg" alt="Smarty Agro" width="44" height="44">
+                <span class="brand-text"><b>SMARTYAGRO</b><small>SYSTEM</small></span>
             </div>
             <div class="sidebar-profile">
                 <div class="avatar-container" onclick="triggerAvatarUpload()">
@@ -256,14 +256,14 @@
                     <button data-tab="poultry" onclick="switchTabSecure('poultry')"><i class="ph-fill ph-egg"></i> <span>Poultry Business</span></button>
                     <button data-tab="livestock" onclick="switchTabSecure('livestock')"><i class="ph-fill ph-cow"></i> <span>Livestock</span></button>
                     <button data-tab="crypto" onclick="switchTabSecure('crypto')"><i class="ph-fill ph-currency-btc"></i> <span>Crypto Trade</span></button>
-                    <button data-tab="save-money" onclick="switchTabSecure('save-money')"><i class="ph-fill ph-piggy-bank"></i> <span id="menu-save">Save</span></button>
-                    <button data-tab="loan" onclick="switchTabSecure('loan')"><i class="ph-fill ph-hand-coins"></i> <span id="menu-loan">Loans</span></button>
-                    <button data-tab="exchange" onclick="switchTabSecure('exchange')"><i class="ph-fill ph-arrows-left-right"></i> <span id="menu-exchange">Exchange rate</span></button>
+                    <button data-tab="save-money" onclick="switchTabSecure('save-money')"><i class="ph-fill ph-piggy-bank"></i> <span id="menu-save">Saving Money</span></button>
+                    <button data-tab="loan" onclick="switchTabSecure('loan')"><i class="ph-fill ph-hand-coins"></i> <span id="menu-loan">Loans Money</span></button>
+                    <button data-tab="exchange" onclick="switchTabSecure('exchange')"><i class="ph-fill ph-arrows-left-right"></i> <span id="menu-exchange">Currency Exchange</span></button>
                     <button data-tab="settings" onclick="switchTab('settings')"><i class="ph-fill ph-gear"></i> <span id="menu-settings">Settings</span></button>
                     <button onclick="logoutLocalUser()" class="btn-logout"><i class="ph-bold ph-sign-out"></i> <span id="menu-logout">Logout</span></button>
                 </nav>
                 <div class="sidebar-footer">
-                    © 2026 Smarty System<span>Smarty System &bull; Better Future</span>
+                    © 2026 Smarty Agro ALL rights reseved<span>Smarty System &bull; Better Future</span>
                 </div>
             </div>
         </aside>
