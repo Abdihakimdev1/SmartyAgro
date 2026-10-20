@@ -1,8 +1,8 @@
-# 🚀 Smarty System
+# 🚀 Smarty Agro
 
 > **Modern Money Management System** — Poultry, Livestock, Crypto, Savings, Loans & Currency Exchange
 
-![Version](https://img.shields.io/badge/version-2.0.0-0cc44e?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.0.0-0cc44e?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Private-0b2a4a?style=for-the-badge)
 ![Status](https://img.shields.io/badge/status-Active-0cc44e?style=for-the-badge)
 
@@ -35,7 +35,7 @@
 - 🐔 **Poultry Business**
 - 🐄 **Livestock Management**
 - ₿ **Crypto Trading**
-- 💰 **Savings**
+- 💰 **Saving Money**
 - 🤝 **Loans Management**
 - 💱 **Currency Exchange**
 
