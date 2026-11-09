@@ -86,6 +86,16 @@ The system uses **Supabase** for cloud data storage and offers **2 themes** and 
 
 ## 📁 Project Structure
 
+```
+Smarty-Agro/
+├── index.html            # App markup (login, dashboard, settings)
+├── style.css             # All styles (themes, responsive, loading, tables)
+├── script.js             # App logic + Supabase calls
+├── select-ui.js          # Modern dropdown (option input) enhancer
+├── manifest.webmanifest  # PWA manifest
+├── assets/               # Icons, favicon, logo
+└── supabase/             # SQL setup + admin edge function
+```
 
 ---
 
@@ -119,3 +129,13 @@ Includes summary, savings balances, poultry, livestock, crypto and loans. Needs 
 - **Settings > Activity Log (Admin):** sign-ins, sales, loans, savings and staff changes, written by the database.
 - **Honest saving:** the screen updates only after Supabase confirms; failures show an error. Import/Reset are atomic and Admin-only. Deleting asks for your own password (checked on the server).
 - **Supabase:** see `supabase/README.md`. The database lock (`02_lock_policies.sql`) is the last step.
+
+---
+
+## v6 - UI polish (Nov 2026)
+
+- **Login:** removed the "Choose account type" cards (the Role dropdown stays). The phone field has a fixed **+252** prefix; users type only the local number, and pasted numbers (`+252…`, `252…`, `0…`) are normalized automatically.
+- **Desktop login:** wider card with a two-column form.
+- **Modern dropdowns:** all option inputs use a custom dropdown (`select-ui.js`); the real `<select>` stays in the DOM, so `onchange` and `.value` still work.
+- **Loading screen:** redesigned (logo, orbiting icons, ring, progress); fixed the missing logo path (`assets/icon.svg`).
+- **Fixed tables:** tables keep a fixed height and scroll inside with a pinned header; the Activity Log is capped at 420px.
