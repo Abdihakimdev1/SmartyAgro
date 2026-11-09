@@ -37,16 +37,31 @@
     </svg>
 
     <!-- SECTION: GLOBAL LOADING ANIMATION -->
-    <div id="loading-screen" class="loading-overlay hidden">
-        <div class="loading-spinner-modern">
-            <div class="loading-logo">
-                <img class="sm-logo" src="icon.svg" alt="Smarty System" width="44" height="44">
+    <div id="loading-screen" class="loading-overlay hidden" role="status" aria-live="polite">
+        <span class="ld-bg ld-bg-1"></span>
+        <span class="ld-bg ld-bg-2"></span>
+        <div class="ld-card">
+            <div class="ld-stage">
+                <span class="ld-glow"></span>
+                <svg class="ld-ring" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="ld-ring-bg" cx="60" cy="60" r="54"></circle>
+                    <circle class="ld-ring-arc" cx="60" cy="60" r="54"></circle>
+                </svg>
+                <div class="ld-orbit" aria-hidden="true">
+                    <span class="ld-ico" style="--a:0deg"><i class="ph-fill ph-egg"></i></span>
+                    <span class="ld-ico" style="--a:90deg"><i class="ph-fill ph-plant"></i></span>
+                    <span class="ld-ico" style="--a:180deg"><i class="ph-fill ph-coins"></i></span>
+                    <span class="ld-ico" style="--a:270deg"><i class="ph-fill ph-chart-line-up"></i></span>
+                </div>
+                <div class="loading-logo">
+                    <img class="sm-logo" src="assets/icon.svg" alt="Smarty Agro" width="64" height="64">
+                </div>
             </div>
+            <div class="ld-brand">Smarty <b>Agro</b></div>
+            <div class="loading-text" id="loading-label">Please wait...</div>
+            <div class="loading-progress"></div>
+            <div class="ld-dots" aria-hidden="true"><i></i><i></i><i></i></div>
         </div>
-        <div class="loading-text" id="loading-label">
-            Please wait...
-        </div>
-        <div class="loading-progress"></div>
     </div>
 
     <!-- SECTION: LOGIN PAGE -->
@@ -116,21 +131,6 @@
                     </button>
                 </form>
 
-                <div class="quick-divider"><span>CHOOSE ACCOUNT TYPE</span></div>
-                <div class="quick-roles">
-                    <button type="button" class="quick-role qr-admin active" data-role="admin" onclick="selectQuickRole('admin')">
-                        <i class="ph-fill ph-crown-simple"></i><strong>Admin</strong><small>Full Access</small>
-                    </button>
-                    <button type="button" class="quick-role qr-manager" data-role="manager" onclick="selectQuickRole('manager')">
-                        <i class="ph-fill ph-briefcase"></i><strong>Manager</strong><small>Limited Access</small>
-                    </button>
-                    <button type="button" class="quick-role qr-cashier" data-role="staff" onclick="selectQuickRole('staff')">
-                        <i class="ph-fill ph-cash-register"></i><strong>Cashier</strong><small>Sales &amp; Cash</small>
-                    </button>
-                    <button type="button" class="quick-role qr-employee" data-role="staff" onclick="selectQuickRole('staff')">
-                        <i class="ph-fill ph-user"></i><strong>Employee</strong><small>Basic Access</small>
-                    </button>
-                </div>
                 <p class="secure-line"><i class="ph-fill ph-shield-check"></i> Secured sign-in &bull; role-based access</p>
                 <div class="auth-note">
                     <i class="ph-fill ph-lock-simple"></i>
@@ -863,7 +863,7 @@
                         <h3><i class="ph-fill ph-clipboard-text"></i> Activity Log</h3>
                         <p class="settings-hint">Latest 150 actions (sign-ins, sales, loans, savings, staff changes). Only Admin can see this.</p>
                         <button onclick="loadAuditLog()" class="btn btn-ghost" style="margin-bottom:12px;"><i class="ph-bold ph-arrow-clockwise"></i> Refresh</button>
-                        <div class="table-responsive">
+                        <div class="table-responsive table-fixed audit-fixed">
                             <table class="staff-table">
                                 <thead><tr><th>Time</th><th>User</th><th>Action</th><th>Area</th><th>Details</th></tr></thead>
                                 <tbody id="audit-table-body"><tr><td colspan="5" class="no-results-msg">-</td></tr></tbody>
@@ -900,6 +900,7 @@
         </nav>
     </div>
 
+    <script src="select-ui.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

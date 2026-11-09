@@ -602,10 +602,6 @@ function setLoginMessage(msg, ok) {
     el.innerText = msg || '';
     el.classList.toggle('ok', !!ok);
 }
-function selectQuickRole(role) { // only pre-selects the account type - no credentials are stored or skipped
-    document.getElementById('login-role').value = role;
-    document.querySelectorAll('.quick-role').forEach(b => b.classList.toggle('active', b.dataset.role === role));
-}
 function showForgotPassword() {
     setLoginMessage('Forgot your password? Ask your Admin to reset it from Settings > Staff & Roles.', true);
 }
