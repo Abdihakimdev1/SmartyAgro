@@ -538,8 +538,8 @@
                         <div class="form-group">
                             <label><i class="ph ph-coins"></i> Currency</label>
                             <select id="poultry-currency" onchange="updatePaymentMethods('poultry')">
-                                <option value="SLSH">Somaliland (SLSH US)</option>
-                                <option value="ETB">Ethiopia (ETB)</option>
+                                <option value="SLSH">Somaliland Money</option>
+                                <option value="ETB">Ethiopia Money</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -613,8 +613,8 @@
                         <div class="form-group">
                             <label><i class="ph ph-coins"></i> Currency</label>
                             <select id="live-currency" onchange="updatePaymentMethods('livestock')">
-                                <option value="SLSH">Somaliland (SLSH / US)</option>
-                                <option value="ETB">Ethiopia (ETB)</option>
+                                <option value="SLSH">Somaliland Money</option>
+                                <option value="ETB">Ethiopia Money</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -706,9 +706,9 @@
                         <div class="form-group">
                             <label><i class="ph ph-wallet"></i> Currency Type</label>
                             <select id="save-currency">
-                                <option value="USD">US DOLLAR</option>
-                                <option value="SLSH">SL SHILLING</option>
-                                <option value="ETB">ET BIRR</option>
+                                <option value="USD">USD</option>
+                                <option value="SLSH">SLSH</option>
+                                <option value="ETB">ETB</option>
                             </select>
                         </div>
                     </div>
@@ -741,9 +741,9 @@
                         <div class="form-group">
                             <label><i class="ph ph-coins"></i> Currency Type</label>
                             <select id="loan-currency">
-                                <option value="USD">US DOLLAR</option>
-                                <option value="SLSH">SL SHILLING</option>
-                                <option value="ETB">ET BIRR</option>
+                                <option value="USD">USD</option>
+                                <option value="SLSH">SLSH</option>
+                                <option value="ETB">ETB</option>
                             </select>
                         </div>
                     </div>
@@ -914,7 +914,7 @@
                                 <i class="ph ph-upload-simple"></i> Import
                                 <input type="file" id="import-input" accept=".json" class="hidden" onchange="importData(event)">
                             </label>
-                            <button id="btn-restore" onclick="restoreSystemSecure()" class="btn" style="width:100%; background-color:#dc2626;">
+                            <button disabled id="btn-restore" onclick="restoreSystemSecure()" class="btn" style="width:100%; background-color:#dc2626;">
                                 <i class="ph-bold ph-arrow-counter-clockwise"></i> Restore System
                             </button>
                         </div>
