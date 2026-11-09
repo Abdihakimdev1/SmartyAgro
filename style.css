@@ -314,6 +314,8 @@ i[class^="ph"], i[class*=" ph-"] { line-height: 1; }
 .field input:focus, .field select:focus { border-color: #12b85a; box-shadow: 0 0 0 4px rgba(18, 184, 90, .15); }
 .select-field select { border-color: #66dba0; background-color: #f1fbf5; font-weight: 700; }
 .select-field .field-icon { color: #0aa84a; }
+.phone-field .phone-prefix { position: absolute; left: 46px; top: 50%; transform: translateY(-50%); z-index: 2; display: flex; align-items: center; height: 26px; padding-right: 12px; border-right: 1.5px solid #dbe7e1; color: #0a2540; font-weight: 800; font-size: .95rem; letter-spacing: .2px; pointer-events: none; }
+.field.phone-field input { padding-left: 112px; }
 .password-wrapper input { padding-right: 48px; }
 .password-wrapper .toggle-password { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #7c93a8; cursor: pointer; font-size: 1.2rem; z-index: 2; }
 .password-wrapper .toggle-password:hover { color: #0aa84a; }

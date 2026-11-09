@@ -104,9 +104,10 @@
 
                     <div class="form-group">
                         <label for="login-phone"><i class="ph-fill ph-phone"></i> Phone Number <span class="req">*</span></label>
-                        <div class="field">
+                        <div class="field phone-field">
                             <i class="ph ph-phone field-icon"></i>
-                            <input type="tel" id="login-phone" placeholder="+252 63 XXX XXXX" autocomplete="tel" inputmode="tel" value="+252">
+                            <span class="phone-prefix" aria-hidden="true">+252</span>
+                            <input type="tel" id="login-phone" placeholder="63 XXX XXXX" autocomplete="tel-national" inputmode="numeric" aria-label="Phone number after +252">
                         </div>
                     </div>
 

@@ -602,6 +602,21 @@ function setLoginMessage(msg, ok) {
     el.innerText = msg || '';
     el.classList.toggle('ok', !!ok);
 }
+// The +252 prefix is fixed in the field; the input only holds the local number.
+function normalizeLocalPhone(v) {
+    let d = String(v || '').replace(/\D/g, '');
+    if (d.startsWith('00252')) d = d.slice(5);
+    else if (d.startsWith('252') && d.length >= 11) d = d.slice(3);
+    d = d.replace(/^0+/, '');
+    return d.slice(0, 10);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const p = document.getElementById('login-phone');
+    if (p) p.addEventListener('input', () => {
+        const n = normalizeLocalPhone(p.value);
+        if (p.value !== n) p.value = n;
+    });
+});
 function showForgotPassword() {
     setLoginMessage('Forgot your password? Ask your Admin to reset it from Settings > Staff & Roles.', true);
 }
@@ -650,12 +665,12 @@ async function checkLoginState() {
 async function loginLocalUser() {
     const roleSel = document.getElementById('login-role').value;
     const email = document.getElementById('login-email').value.trim().toLowerCase();
-    const phone = document.getElementById('login-phone').value.trim();
+    const phone = '+252' + normalizeLocalPhone(document.getElementById('login-phone').value);
     const password = document.getElementById('login-password').value;
     const remember = document.getElementById('login-remember').checked;
     const btn = document.getElementById('login-submit');
 
-    if (!email || !phone || !password) { setLoginMessage('Please enter your email, phone and password.'); return; }
+    if (!email || phone.length < 11 || !password) { setLoginMessage('Please enter your email, phone and password.'); return; }
     setLoginMessage('');
     btn.disabled = true;
 
